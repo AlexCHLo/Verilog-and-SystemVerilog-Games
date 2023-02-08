@@ -19,3 +19,14 @@ Example: “nnole5” -> “nnole4” -> “nnole3” …
 Every game won counts up to your high score until you lose! When you lose the seven segment display shows: done “highscore”
 
 Example : “done 4”
+
+## Math
+This mini game makes use of the 4 right most switches as input. The user input will behave like a binary and output a specific decimal according to the switches. For example, if the switches are [0,0,1,1], then the user input will be “3” on the hex display. The goal of this mini game is that the users are to input the right number to a subtraction as displayed on the displays within the time limit. To be able to transition to a different state, the user must either wait for 5 seconds to get moved to the finish state, or the user must input the right number. The machine checks if the user got the right number by generating two different numbers that are to be displayed and check if the difference is the same. If the user gets the right answer, then they win this mini game and the game state will transition to the “Whack a mole” state.
+
+## Whack a Mole
+When entering the whack a mole state the switches are read and stored in the originalPositions array. This holds how the switches were as the game started. This is used to compare what the user does and compares the switches before and after they were changed. This is done by using the newPositions variable. This reads the switches as the game is counting. When this is done we can compare the newPositions with the originalPositions and store the changes in the changes variable.
+
+The counter counts up to 50,000,000 this is for every second. Every second that passes the originalPositions are updated to make sure that even if the user has switched the incorrect switch, when the correct switch is changed the user wins the game. Therefore whacking the mole. 
+
+After winning the game, the state exits and changes the location of the LED so the next round the mole will be on a different LED. There are 10 positions the mole can be in as the game continues the mole will switch to any of these LED’s.
+
