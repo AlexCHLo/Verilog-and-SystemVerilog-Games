@@ -1,3 +1,5 @@
+## Project Report
+
 For this EECS 3216 Z project, we will be replicating a toy called “Bop It” as shown below. It's a toy that entails a series of mini games where you do the mini games within a time limit. Those mini games involve physically interacting with the toy in a certain way, such as twisting a knob, smacking a button or shaking the toy.
 
 To replicate this, we will be making use of the DE10 Lite board physical features. Such that we are using the board’s buttons, and switches. We cannot fully replicate all the features that the “Bop It” toy’s features, so we made 2 mini games that the user must complete within a certain amount of time.
