@@ -1,0 +1,633 @@
+Analysis & Synthesis report for Final_Project
+Sun Apr 17 20:58:45 2022
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Final_Project|STATE
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Port Connectivity Checks: "decimalToHex:comb_1254"
+ 16. Port Connectivity Checks: "decimalToHex:comb_1253"
+ 17. Port Connectivity Checks: "decimalToHex:comb_1252"
+ 18. Port Connectivity Checks: "decimalToHex:comb_1251"
+ 19. Port Connectivity Checks: "decimalToHex:comb_1250"
+ 20. Port Connectivity Checks: "decimalToHex:comb_1249"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Apr 17 20:58:45 2022       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; Final_Project                               ;
+; Top-level Entity Name              ; Final_Project                               ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 439                                         ;
+;     Total combinational functions  ; 425                                         ;
+;     Dedicated logic registers      ; 149                                         ;
+; Total registers                    ; 149                                         ;
+; Total pins                         ; 71                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C6GES   ;                    ;
+; Top-level entity name                                            ; Final_Project      ; Final_Project      ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processors 3-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; Final_Project.sv                 ; yes             ; User SystemVerilog HDL File  ; F:/York Shit/EECS 3216/Final_Project/Final_Project.sv                ;         ;
+; output_files/SEVENSEG_OUTPUT.sv  ; yes             ; User SystemVerilog HDL File  ; F:/York Shit/EECS 3216/Final_Project/output_files/SEVENSEG_OUTPUT.sv ;         ;
+; output_files/decimalToHex.sv     ; yes             ; User SystemVerilog HDL File  ; F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv    ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 439       ;
+;                                             ;           ;
+; Total combinational functions               ; 425       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 203       ;
+;     -- 3 input functions                    ; 107       ;
+;     -- <=2 input functions                  ; 115       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 356       ;
+;     -- arithmetic mode                      ; 69        ;
+;                                             ;           ;
+; Total registers                             ; 149       ;
+;     -- Dedicated logic registers            ; 149       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 71        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 149       ;
+; Total fan-out                               ; 1911      ;
+; Average fan-out                             ; 2.67      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                   ; Entity Name   ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+---------------+--------------+
+; |Final_Project              ; 425 (231)           ; 149 (149)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 71   ; 0            ; 0          ; |Final_Project                        ; Final_Project ; work         ;
+;    |decimalToHex:comb_1249| ; 44 (44)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|decimalToHex:comb_1249 ; decimalToHex  ; work         ;
+;    |decimalToHex:comb_1250| ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|decimalToHex:comb_1250 ; decimalToHex  ; work         ;
+;    |decimalToHex:comb_1251| ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|decimalToHex:comb_1251 ; decimalToHex  ; work         ;
+;    |decimalToHex:comb_1252| ; 43 (43)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|decimalToHex:comb_1252 ; decimalToHex  ; work         ;
+;    |decimalToHex:comb_1253| ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|decimalToHex:comb_1253 ; decimalToHex  ; work         ;
+;    |decimalToHex:comb_1254| ; 44 (44)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|decimalToHex:comb_1254 ; decimalToHex  ; work         ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------+
+; State Machine - |Final_Project|STATE                                ;
++--------------+-------------+--------------+------------+------------+
+; Name         ; STATE.start ; STATE.finish ; STATE.mole ; STATE.math ;
++--------------+-------------+--------------+------------+------------+
+; STATE.start  ; 0           ; 0            ; 0          ; 0          ;
+; STATE.math   ; 1           ; 0            ; 0          ; 1          ;
+; STATE.mole   ; 1           ; 0            ; 1          ; 0          ;
+; STATE.finish ; 1           ; 1            ; 0          ; 0          ;
++--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                           ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal            ; Free of Timing Hazards ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; decimalToHex:comb_1249|decimal_reg[1]               ; decimalToHex:comb_1249|WideOr0 ; yes                    ;
+; decimalToHex:comb_1249|decimal_reg[2]               ; decimalToHex:comb_1249|WideOr0 ; yes                    ;
+; decimalToHex:comb_1249|decimal_reg[3]               ; decimalToHex:comb_1249|WideOr0 ; yes                    ;
+; decimalToHex:comb_1249|decimal_reg[4]               ; decimalToHex:comb_1249|WideOr0 ; yes                    ;
+; decimalToHex:comb_1249|decimal_reg[5]               ; decimalToHex:comb_1249|WideOr0 ; yes                    ;
+; decimalToHex:comb_1249|decimal_reg[6]               ; decimalToHex:comb_1249|WideOr0 ; yes                    ;
+; decimalToHex:comb_1249|decimal_reg[7]               ; decimalToHex:comb_1249|WideOr0 ; yes                    ;
+; decimalToHex:comb_1250|decimal_reg[1]               ; decimalToHex:comb_1250|WideOr0 ; yes                    ;
+; decimalToHex:comb_1250|decimal_reg[2]               ; decimalToHex:comb_1250|WideOr0 ; yes                    ;
+; decimalToHex:comb_1250|decimal_reg[3]               ; decimalToHex:comb_1250|WideOr0 ; yes                    ;
+; decimalToHex:comb_1250|decimal_reg[4]               ; decimalToHex:comb_1250|WideOr0 ; yes                    ;
+; decimalToHex:comb_1250|decimal_reg[5]               ; decimalToHex:comb_1250|WideOr0 ; yes                    ;
+; decimalToHex:comb_1250|decimal_reg[6]               ; decimalToHex:comb_1250|WideOr0 ; yes                    ;
+; decimalToHex:comb_1250|decimal_reg[7]               ; decimalToHex:comb_1250|WideOr0 ; yes                    ;
+; decimalToHex:comb_1251|decimal_reg[1]               ; decimalToHex:comb_1251|WideOr0 ; yes                    ;
+; decimalToHex:comb_1251|decimal_reg[2]               ; decimalToHex:comb_1251|WideOr0 ; yes                    ;
+; decimalToHex:comb_1251|decimal_reg[3]               ; decimalToHex:comb_1251|WideOr0 ; yes                    ;
+; decimalToHex:comb_1251|decimal_reg[4]               ; decimalToHex:comb_1251|WideOr0 ; yes                    ;
+; decimalToHex:comb_1251|decimal_reg[5]               ; decimalToHex:comb_1251|WideOr0 ; yes                    ;
+; decimalToHex:comb_1251|decimal_reg[6]               ; decimalToHex:comb_1251|WideOr0 ; yes                    ;
+; decimalToHex:comb_1251|decimal_reg[7]               ; decimalToHex:comb_1251|WideOr0 ; yes                    ;
+; decimalToHex:comb_1252|decimal_reg[1]               ; decimalToHex:comb_1252|WideOr0 ; yes                    ;
+; decimalToHex:comb_1252|decimal_reg[2]               ; decimalToHex:comb_1252|WideOr0 ; yes                    ;
+; decimalToHex:comb_1252|decimal_reg[3]               ; decimalToHex:comb_1252|WideOr0 ; yes                    ;
+; decimalToHex:comb_1252|decimal_reg[4]               ; decimalToHex:comb_1252|WideOr0 ; yes                    ;
+; decimalToHex:comb_1252|decimal_reg[5]               ; decimalToHex:comb_1252|WideOr0 ; yes                    ;
+; decimalToHex:comb_1252|decimal_reg[6]               ; decimalToHex:comb_1252|WideOr0 ; yes                    ;
+; decimalToHex:comb_1252|decimal_reg[7]               ; decimalToHex:comb_1252|WideOr0 ; yes                    ;
+; decimalToHex:comb_1253|decimal_reg[2]               ; decimalToHex:comb_1253|WideOr0 ; yes                    ;
+; decimalToHex:comb_1253|decimal_reg[3]               ; decimalToHex:comb_1253|WideOr0 ; yes                    ;
+; decimalToHex:comb_1253|decimal_reg[4]               ; decimalToHex:comb_1253|WideOr0 ; yes                    ;
+; decimalToHex:comb_1253|decimal_reg[5]               ; decimalToHex:comb_1253|WideOr0 ; yes                    ;
+; decimalToHex:comb_1253|decimal_reg[6]               ; decimalToHex:comb_1253|WideOr0 ; yes                    ;
+; decimalToHex:comb_1253|decimal_reg[7]               ; decimalToHex:comb_1253|WideOr0 ; yes                    ;
+; decimalToHex:comb_1254|decimal_reg[1]               ; decimalToHex:comb_1254|WideOr0 ; yes                    ;
+; decimalToHex:comb_1254|decimal_reg[2]               ; decimalToHex:comb_1254|WideOr0 ; yes                    ;
+; decimalToHex:comb_1254|decimal_reg[3]               ; decimalToHex:comb_1254|WideOr0 ; yes                    ;
+; decimalToHex:comb_1254|decimal_reg[4]               ; decimalToHex:comb_1254|WideOr0 ; yes                    ;
+; decimalToHex:comb_1254|decimal_reg[5]               ; decimalToHex:comb_1254|WideOr0 ; yes                    ;
+; decimalToHex:comb_1254|decimal_reg[6]               ; decimalToHex:comb_1254|WideOr0 ; yes                    ;
+; decimalToHex:comb_1254|decimal_reg[7]               ; decimalToHex:comb_1254|WideOr0 ; yes                    ;
+; Number of user-specified and inferred latches = 41  ;                                ;                        ;
++-----------------------------------------------------+--------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; HEX1_input[6,7]                        ; Stuck at GND due to stuck port data_in ;
+; HEX2_input[6,7]                        ; Stuck at GND due to stuck port data_in ;
+; HEX4_input[6,7]                        ; Stuck at GND due to stuck port data_in ;
+; moleLocation[5]                        ; Stuck at GND due to stuck port data_in ;
+; HEX2_input[1]                          ; Merged with HEX1_input[4]              ;
+; HEX4_input[5]                          ; Merged with HEX1_input[5]              ;
+; HEX2_input[3..5]                       ; Merged with HEX1_input[5]              ;
+; HEX4_input[1,4]                        ; Merged with HEX1_input[5]              ;
+; HEX4_input[3]                          ; Merged with HEX2_input[2]              ;
+; originalPositions[9]                   ; Stuck at GND due to stuck port data_in ;
+; newPositions[9]                        ; Stuck at GND due to stuck port data_in ;
+; changes[9]                             ; Stuck at GND due to stuck port data_in ;
+; STATE~9                                ; Lost fanout                            ;
+; Total Number of Removed Registers = 19 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                               ;
++----------------------+---------------------------+----------------------------------------+
+; Register name        ; Reason for Removal        ; Registers Removed due to This Register ;
++----------------------+---------------------------+----------------------------------------+
+; originalPositions[9] ; Stuck at GND              ; changes[9]                             ;
+;                      ; due to stuck port data_in ;                                        ;
++----------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 149   ;
+; Number of registers using Synchronous Clear  ; 36    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 101   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; moleLocation[3]                        ; 3       ;
+; FIRST_number[0]                        ; 4       ;
+; FIRST_number[2]                        ; 4       ;
+; SECOND_number[2]                       ; 4       ;
+; CLOCKDISPLAY[0]                        ; 3       ;
+; CLOCKDISPLAY[2]                        ; 3       ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Final_Project|newPositions[2]      ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |Final_Project|originalPositions[8] ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Final_Project|winCounter[0]        ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |Final_Project|CLOCKDISPLAY[4]      ;
+; 7:1                ; 33 bits   ; 132 LEs       ; 33 LEs               ; 99 LEs                 ; Yes        ; |Final_Project|clockCounter[17]     ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Final_Project|CLOCKDISPLAY[2]      ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |Final_Project|Selector34           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decimalToHex:comb_1254"                                                                                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Decimal ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "Decimal[8..8]" will be connected to GND. ;
+; Hex     ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (8 bits) it drives; bit(s) "Hex[8..8]" have no fanouts                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decimalToHex:comb_1253"                                                                                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Decimal ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "Decimal[8..8]" will be connected to GND. ;
+; Hex     ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (8 bits) it drives; bit(s) "Hex[8..8]" have no fanouts                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decimalToHex:comb_1252"                                                                                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Decimal ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "Decimal[8..8]" will be connected to GND. ;
+; Hex     ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (8 bits) it drives; bit(s) "Hex[8..8]" have no fanouts                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decimalToHex:comb_1251"                                                                                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Decimal ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "Decimal[8..8]" will be connected to GND. ;
+; Hex     ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (8 bits) it drives; bit(s) "Hex[8..8]" have no fanouts                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decimalToHex:comb_1250"                                                                                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Decimal ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "Decimal[8..8]" will be connected to GND. ;
+; Hex     ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (8 bits) it drives; bit(s) "Hex[8..8]" have no fanouts                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decimalToHex:comb_1249"                                                                                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Decimal ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "Decimal[8..8]" will be connected to GND. ;
+; Hex     ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (8 bits) it drives; bit(s) "Hex[8..8]" have no fanouts                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 71                          ;
+; cycloneiii_ff         ; 149                         ;
+;     ENA               ; 65                          ;
+;     ENA SCLR          ; 36                          ;
+;     plain             ; 48                          ;
+; cycloneiii_lcell_comb ; 427                         ;
+;     arith             ; 69                          ;
+;         2 data inputs ; 62                          ;
+;         3 data inputs ; 7                           ;
+;     normal            ; 358                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 45                          ;
+;         3 data inputs ; 100                         ;
+;         4 data inputs ; 203                         ;
+;                       ;                             ;
+; Max LUT depth         ; 6.40                        ;
+; Average LUT depth     ; 3.33                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sun Apr 17 20:58:39 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Final_Project -c Final_Project
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file final_project.sv
+    Info (12023): Found entity 1: Final_Project File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/sevenseg_output.sv
+    Info (12023): Found entity 1: SEVENSEG_OUTPUT File: F:/York Shit/EECS 3216/Final_Project/output_files/SEVENSEG_OUTPUT.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/decimaltohex.sv
+    Info (12023): Found entity 1: decimalToHex File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(320): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 320
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(321): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 321
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(322): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 322
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(323): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 323
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(324): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 324
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(325): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 325
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(328): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 328
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(329): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 329
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(330): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 330
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(331): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 331
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(332): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 332
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.sv(333): instance has no name File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 333
+Info (12127): Elaborating entity "Final_Project" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at Final_Project.sv(129): truncated value with size 32 to match size of target (8) File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 129
+Warning (10230): Verilog HDL assignment warning at Final_Project.sv(154): truncated value with size 32 to match size of target (8) File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 154
+Warning (10230): Verilog HDL assignment warning at Final_Project.sv(155): truncated value with size 32 to match size of target (8) File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 155
+Warning (10230): Verilog HDL assignment warning at Final_Project.sv(168): truncated value with size 32 to match size of target (4) File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 168
+Warning (10230): Verilog HDL assignment warning at Final_Project.sv(195): truncated value with size 32 to match size of target (8) File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 195
+Warning (10230): Verilog HDL assignment warning at Final_Project.sv(225): truncated value with size 32 to match size of target (10) File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 225
+Warning (10230): Verilog HDL assignment warning at Final_Project.sv(253): truncated value with size 32 to match size of target (4) File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 253
+Warning (10030): Net "USERINPUT[7..3]" at Final_Project.sv(53) has no driver or initial value, using a default initial value '0' File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 53
+Info (12128): Elaborating entity "decimalToHex" for hierarchy "decimalToHex:comb_1249" File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 320
+Warning (10270): Verilog HDL Case Statement warning at decimalToHex.sv(11): incomplete case statement has no default case item File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+Warning (10240): Verilog HDL Always Construct warning at decimalToHex.sv(11): inferring latch(es) for variable "decimal_reg", which holds its previous value in one or more paths through the always construct File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+Warning (10034): Output port "Hex[8]" at decimalToHex.sv(4) has no driver File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 4
+Info (10041): Inferred latch for "decimal_reg[0]" at decimalToHex.sv(11) File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+Info (10041): Inferred latch for "decimal_reg[1]" at decimalToHex.sv(11) File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+Info (10041): Inferred latch for "decimal_reg[2]" at decimalToHex.sv(11) File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+Info (10041): Inferred latch for "decimal_reg[3]" at decimalToHex.sv(11) File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+Info (10041): Inferred latch for "decimal_reg[4]" at decimalToHex.sv(11) File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+Info (10041): Inferred latch for "decimal_reg[5]" at decimalToHex.sv(11) File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+Info (10041): Inferred latch for "decimal_reg[6]" at decimalToHex.sv(11) File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+Info (10041): Inferred latch for "decimal_reg[7]" at decimalToHex.sv(11) File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+Info (12128): Elaborating entity "SEVENSEG_OUTPUT" for hierarchy "SEVENSEG_OUTPUT:comb_1255" File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 328
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch decimalToHex:comb_1249|decimal_reg[1] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX0_input[3] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1249|decimal_reg[2] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX0_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1249|decimal_reg[3] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX0_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1249|decimal_reg[4] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX0_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1249|decimal_reg[5] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX0_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1249|decimal_reg[6] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX0_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1249|decimal_reg[7] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX0_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1250|decimal_reg[1] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX1_input[3] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1250|decimal_reg[2] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX1_input[2] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1250|decimal_reg[3] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX1_input[3] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1250|decimal_reg[4] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX1_input[3] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1250|decimal_reg[5] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX1_input[2] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1250|decimal_reg[6] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX1_input[4] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1250|decimal_reg[7] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX1_input[2] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1251|decimal_reg[1] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX1_input[4] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1251|decimal_reg[2] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX2_input[0] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1251|decimal_reg[3] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX2_input[0] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1251|decimal_reg[4] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX2_input[0] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1251|decimal_reg[5] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX2_input[0] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1251|decimal_reg[6] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX2_input[0] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1251|decimal_reg[7] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX2_input[0] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1252|decimal_reg[1] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX3_input[3] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1252|decimal_reg[2] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX3_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1252|decimal_reg[3] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX3_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1252|decimal_reg[4] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX3_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1252|decimal_reg[5] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX3_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1252|decimal_reg[6] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX3_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1252|decimal_reg[7] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX3_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1253|decimal_reg[2] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX1_input[5] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1253|decimal_reg[3] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX1_input[5] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1253|decimal_reg[4] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX4_input[0] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1253|decimal_reg[5] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX4_input[0] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1253|decimal_reg[6] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX4_input[0] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1253|decimal_reg[7] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX4_input[0] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1254|decimal_reg[1] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX5_input[3] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1254|decimal_reg[2] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX5_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1254|decimal_reg[3] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX5_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1254|decimal_reg[4] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX5_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1254|decimal_reg[5] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX5_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1254|decimal_reg[6] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX5_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13012): Latch decimalToHex:comb_1254|decimal_reg[7] has unsafe behavior File: F:/York Shit/EECS 3216/Final_Project/output_files/decimalToHex.sv Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX5_input[6] File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 96
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 22
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 23
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 24
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 25
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 26
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 26
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 27
+    Warning (13410): Pin "moleLED[5]" is stuck at GND File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 32
+    Warning (13410): Pin "moleLED[10]" is stuck at GND File: F:/York Shit/EECS 3216/Final_Project/Final_Project.sv Line: 32
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 520 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 59 output pins
+    Info (21061): Implemented 449 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 117 warnings
+    Info: Peak virtual memory: 4824 megabytes
+    Info: Processing ended: Sun Apr 17 20:58:45 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:12
+
+

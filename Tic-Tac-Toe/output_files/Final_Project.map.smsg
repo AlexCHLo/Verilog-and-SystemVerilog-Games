@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at Final_Project.v(200): always construct contains both blocking and non-blocking assignments File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 200
+Warning (10268): Verilog HDL information at Final_Project.v(232): always construct contains both blocking and non-blocking assignments File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (10268): Verilog HDL information at Final_Project.v(629): always construct contains both blocking and non-blocking assignments File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 629

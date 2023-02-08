@@ -1,0 +1,17 @@
+//////////////////////////////////////////////////
+// if playerSymbol = 2'b00, then return underscore
+// if playerSymol = 2'b01, then return 0
+// if playerSymbol = 2'b10, then return X
+
+module playerTurnDecoder (playerSymbol, outputBits)
+
+input [2:0] playerSymbol;
+
+always @(*) begin
+
+case (playerSymbol)
+
+
+end
+
+endmodule

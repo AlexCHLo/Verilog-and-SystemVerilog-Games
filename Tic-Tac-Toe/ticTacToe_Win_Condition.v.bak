@@ -1,0 +1,21 @@
+module ticTacToe_Win_Condition ();
+
+
+// First Channel
+wire top_left;
+wire top_middle;
+wire top_right;
+
+// Second Channel
+wire middle_left;
+wire middle_middle;
+wire middle_right;
+
+// Third Channel
+wire bottom_left;
+wire bottom_middle;
+wire bottom_right;
+
+
+
+endmodule

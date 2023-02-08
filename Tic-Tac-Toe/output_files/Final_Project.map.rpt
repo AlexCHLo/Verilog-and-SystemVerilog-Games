@@ -1,0 +1,595 @@
+Analysis & Synthesis report for Final_Project
+Tue Dec 07 18:15:08 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "playerTurnDecoder:comb_926"
+ 15. Port Connectivity Checks: "channelDecoder:comb_925"
+ 16. Port Connectivity Checks: "playerTurnDecoder:comb_916"
+ 17. Port Connectivity Checks: "playerTurnDecoder:comb_915"
+ 18. Port Connectivity Checks: "playerTurnDecoder:comb_914"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Dec 07 18:15:08 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; Final_Project                               ;
+; Top-level Entity Name              ; Final_Project                               ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 140                                         ;
+;     Total combinational functions  ; 122                                         ;
+;     Dedicated logic registers      ; 29                                          ;
+; Total registers                    ; 29                                          ;
+; Total pins                         ; 55                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C6GES   ;                    ;
+; Top-level entity name                                            ; Final_Project      ; Final_Project      ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; Final_Project.v                  ; yes             ; User Verilog HDL File  ; F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v     ;         ;
+; playerTurnDecoder.v              ; yes             ; User Verilog HDL File  ; F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v ;         ;
+; channelDecoder.v                 ; yes             ; User Verilog HDL File  ; F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v    ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 140            ;
+;                                             ;                ;
+; Total combinational functions               ; 122            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 58             ;
+;     -- 3 input functions                    ; 42             ;
+;     -- <=2 input functions                  ; 22             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 122            ;
+;     -- arithmetic mode                      ; 0              ;
+;                                             ;                ;
+; Total registers                             ; 29             ;
+;     -- Dedicated logic registers            ; 29             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 55             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; button_1~input ;
+; Maximum fan-out                             ; 29             ;
+; Total fan-out                               ; 574            ;
+; Average fan-out                             ; 2.20           ;
++---------------------------------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                 ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                       ; Entity Name       ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------+-------------------+--------------+
+; |Final_Project                  ; 122 (87)            ; 29 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 55   ; 0            ; 0          ; |Final_Project                            ; Final_Project     ; work         ;
+;    |channelDecoder:comb_925|    ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|channelDecoder:comb_925    ; channelDecoder    ; work         ;
+;    |playerTurnDecoder:comb_914| ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|playerTurnDecoder:comb_914 ; playerTurnDecoder ; work         ;
+;    |playerTurnDecoder:comb_915| ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|playerTurnDecoder:comb_915 ; playerTurnDecoder ; work         ;
+;    |playerTurnDecoder:comb_916| ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|playerTurnDecoder:comb_916 ; playerTurnDecoder ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++-----------------------------------------------------+---------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal             ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------------+------------------------+
+; playerTurnDecoder:comb_914|myValue[1]               ; playerTurnDecoder:comb_914|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_914|myValue[2]               ; playerTurnDecoder:comb_914|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_914|myValue[3]               ; playerTurnDecoder:comb_914|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_914|myValue[4]               ; playerTurnDecoder:comb_914|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_914|myValue[5]               ; playerTurnDecoder:comb_914|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_914|myValue[6]               ; playerTurnDecoder:comb_914|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_914|myValue[7]               ; playerTurnDecoder:comb_914|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_915|myValue[1]               ; playerTurnDecoder:comb_915|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_915|myValue[2]               ; playerTurnDecoder:comb_915|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_915|myValue[3]               ; playerTurnDecoder:comb_915|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_915|myValue[4]               ; playerTurnDecoder:comb_915|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_915|myValue[5]               ; playerTurnDecoder:comb_915|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_915|myValue[6]               ; playerTurnDecoder:comb_915|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_915|myValue[7]               ; playerTurnDecoder:comb_915|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_916|myValue[1]               ; playerTurnDecoder:comb_916|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_916|myValue[2]               ; playerTurnDecoder:comb_916|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_916|myValue[3]               ; playerTurnDecoder:comb_916|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_916|myValue[4]               ; playerTurnDecoder:comb_916|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_916|myValue[5]               ; playerTurnDecoder:comb_916|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_916|myValue[6]               ; playerTurnDecoder:comb_916|Mux5 ; yes                    ;
+; playerTurnDecoder:comb_916|myValue[7]               ; playerTurnDecoder:comb_916|Mux5 ; yes                    ;
+; channelDecoder:comb_925|myValue[1]                  ; channelDecoder:comb_925|Mux3    ; yes                    ;
+; channelDecoder:comb_925|myValue[3]                  ; channelDecoder:comb_925|Mux3    ; yes                    ;
+; channelDecoder:comb_925|myValue[4]                  ; channelDecoder:comb_925|Mux3    ; yes                    ;
+; channelDecoder:comb_925|myValue[5]                  ; channelDecoder:comb_925|Mux3    ; yes                    ;
+; channelDecoder:comb_925|myValue[7]                  ; channelDecoder:comb_925|Mux3    ; yes                    ;
+; channelNumber[1]                                    ; GND                             ; yes                    ;
+; channelNumber[0]                                    ; GND                             ; yes                    ;
+; Number of user-specified and inferred latches = 28  ;                                 ;                        ;
++-----------------------------------------------------+---------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; turn[1,2]                              ; Stuck at GND due to stuck port data_in ;
+; test[1]                                ; Merged with test[0]                    ;
+; test[3..7]                             ; Merged with test[2]                    ;
+; bottom_left[2]                         ; Stuck at GND due to stuck port data_in ;
+; bottom_middle[2]                       ; Stuck at GND due to stuck port data_in ;
+; bottom_right[2]                        ; Stuck at GND due to stuck port data_in ;
+; middle_right[2]                        ; Stuck at GND due to stuck port data_in ;
+; middle_middle[2]                       ; Stuck at GND due to stuck port data_in ;
+; middle_left[2]                         ; Stuck at GND due to stuck port data_in ;
+; top_right[2]                           ; Stuck at GND due to stuck port data_in ;
+; top_middle[2]                          ; Stuck at GND due to stuck port data_in ;
+; top_left[2]                            ; Stuck at GND due to stuck port data_in ;
+; turnMod[1..10]                         ; Lost fanout                            ;
+; test[0]                                ; Stuck at VCC due to stuck port data_in ;
+; selection[2]                           ; Stuck at GND due to stuck port data_in ;
+; turn[0]                                ; Merged with turnMod[0]                 ;
+; HEX_1_value[2]                         ; Merged with HEX_0_value[2]             ;
+; HEX_2_value[2]                         ; Merged with HEX_0_value[2]             ;
+; Total Number of Removed Registers = 32 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                       ;
++---------------+---------------------------+---------------------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                                ;
++---------------+---------------------------+---------------------------------------------------------------------------------------+
+; turn[2]       ; Stuck at GND              ; bottom_left[2], bottom_middle[2], bottom_right[2], middle_right[2], middle_middle[2], ;
+;               ; due to stuck port data_in ; middle_left[2], top_right[2], top_middle[2], top_left[2], selection[2]                ;
+; turnMod[10]   ; Lost Fanouts              ; turnMod[5], turnMod[4], turnMod[3], turnMod[2], turnMod[1]                            ;
++---------------+---------------------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 29    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 25    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; test[2]                                 ; 7       ;
+; turnMod[0]                              ; 5       ;
+; HEX_0_value[0]                          ; 5       ;
+; HEX_0_value[1]                          ; 5       ;
+; HEX_1_value[0]                          ; 5       ;
+; HEX_1_value[1]                          ; 5       ;
+; HEX_2_value[0]                          ; 5       ;
+; HEX_2_value[1]                          ; 5       ;
+; top_right[1]                            ; 3       ;
+; top_left[0]                             ; 2       ;
+; top_left[1]                             ; 2       ;
+; top_middle[0]                           ; 3       ;
+; top_middle[1]                           ; 3       ;
+; top_right[0]                            ; 2       ;
+; bottom_right[1]                         ; 5       ;
+; bottom_left[1]                          ; 4       ;
+; bottom_left[0]                          ; 3       ;
+; bottom_middle[1]                        ; 4       ;
+; bottom_middle[0]                        ; 3       ;
+; bottom_right[0]                         ; 4       ;
+; middle_right[1]                         ; 3       ;
+; middle_left[0]                          ; 3       ;
+; middle_left[1]                          ; 3       ;
+; middle_middle[0]                        ; 4       ;
+; middle_middle[1]                        ; 4       ;
+; middle_right[0]                         ; 2       ;
+; Total number of inverted registers = 26 ;         ;
++-----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 10:1               ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |Final_Project|HEX_2_value[2] ;
+; 49:1               ; 3 bits    ; 96 LEs        ; 30 LEs               ; 66 LEs                 ; Yes        ; |Final_Project|selection[1]   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Final_Project|test[0]        ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 8 LEs                ; 18 LEs                 ; Yes        ; |Final_Project|HEX_0_value[0] ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 8 LEs                ; 22 LEs                 ; Yes        ; |Final_Project|HEX_1_value[1] ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |Final_Project|HEX_2_value[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "playerTurnDecoder:comb_926" ;
++-----------------+-------+----------+-------------------+
+; Port            ; Type  ; Severity ; Details           ;
++-----------------+-------+----------+-------------------+
+; playerSymbol[3] ; Input ; Info     ; Stuck at GND      ;
++-----------------+-------+----------+-------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "channelDecoder:comb_925" ;
++-------------------+-------+----------+--------------+
+; Port              ; Type  ; Severity ; Details      ;
++-------------------+-------+----------+--------------+
+; locationSymbol[2] ; Input ; Info     ; Stuck at GND ;
++-------------------+-------+----------+--------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "playerTurnDecoder:comb_916" ;
++-----------------+-------+----------+-------------------+
+; Port            ; Type  ; Severity ; Details           ;
++-----------------+-------+----------+-------------------+
+; playerSymbol[3] ; Input ; Info     ; Stuck at GND      ;
++-----------------+-------+----------+-------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "playerTurnDecoder:comb_915" ;
++-----------------+-------+----------+-------------------+
+; Port            ; Type  ; Severity ; Details           ;
++-----------------+-------+----------+-------------------+
+; playerSymbol[3] ; Input ; Info     ; Stuck at GND      ;
++-----------------+-------+----------+-------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "playerTurnDecoder:comb_914" ;
++-----------------+-------+----------+-------------------+
+; Port            ; Type  ; Severity ; Details           ;
++-----------------+-------+----------+-------------------+
+; playerSymbol[3] ; Input ; Info     ; Stuck at GND      ;
++-----------------+-------+----------+-------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 55                          ;
+; cycloneiii_ff         ; 29                          ;
+;     ENA               ; 25                          ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 126                         ;
+;     normal            ; 126                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 42                          ;
+;         4 data inputs ; 58                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.57                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Tue Dec 07 18:15:02 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Final_Project -c Final_Project
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file final_project.v
+    Info (12023): Found entity 1: Final_Project File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file tictactoe_win_condition.v
+    Info (12023): Found entity 1: ticTacToe_Win_Condition File: F:/York Shit/EECS 3201/lab/Final Project/ticTacToe_Win_Condition.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file sevensegsledoutput.v
+    Info (12023): Found entity 1: sevenSegsLedOutput File: F:/York Shit/EECS 3201/lab/Final Project/sevenSegsLedOutput.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file playerturndecoder.v
+    Info (12023): Found entity 1: playerTurnDecoder File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file channeldecoder.v
+    Info (12023): Found entity 1: channelDecoder File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.v(762): instance has no name File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 762
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.v(763): instance has no name File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 763
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.v(764): instance has no name File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 764
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.v(767): instance has no name File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 767
+Critical Warning (10846): Verilog HDL Instantiation warning at Final_Project.v(768): instance has no name File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 768
+Info (12127): Elaborating entity "Final_Project" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Final_Project.v(57): object "win_condition_reg" assigned a value but never read File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 57
+Warning (10240): Verilog HDL Always Construct warning at Final_Project.v(200): inferring latch(es) for variable "channelNumber", which holds its previous value in one or more paths through the always construct File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 200
+Warning (10230): Verilog HDL assignment warning at Final_Project.v(713): truncated value with size 11 to match size of target (3) File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 713
+Info (10041): Inferred latch for "channelNumber[0]" at Final_Project.v(206) File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 206
+Info (10041): Inferred latch for "channelNumber[1]" at Final_Project.v(206) File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 206
+Info (10041): Inferred latch for "channelNumber[2]" at Final_Project.v(206) File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 206
+Info (12128): Elaborating entity "playerTurnDecoder" for hierarchy "playerTurnDecoder:comb_914" File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 762
+Warning (10270): Verilog HDL Case Statement warning at playerTurnDecoder.v(20): incomplete case statement has no default case item File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 20
+Warning (10240): Verilog HDL Always Construct warning at playerTurnDecoder.v(18): inferring latch(es) for variable "myValue", which holds its previous value in one or more paths through the always construct File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Info (10041): Inferred latch for "myValue[0]" at playerTurnDecoder.v(18) File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Info (10041): Inferred latch for "myValue[1]" at playerTurnDecoder.v(18) File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Info (10041): Inferred latch for "myValue[2]" at playerTurnDecoder.v(18) File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Info (10041): Inferred latch for "myValue[3]" at playerTurnDecoder.v(18) File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Info (10041): Inferred latch for "myValue[4]" at playerTurnDecoder.v(18) File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Info (10041): Inferred latch for "myValue[5]" at playerTurnDecoder.v(18) File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Info (10041): Inferred latch for "myValue[6]" at playerTurnDecoder.v(18) File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Info (10041): Inferred latch for "myValue[7]" at playerTurnDecoder.v(18) File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Info (12128): Elaborating entity "channelDecoder" for hierarchy "channelDecoder:comb_925" File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 767
+Warning (10270): Verilog HDL Case Statement warning at channelDecoder.v(25): incomplete case statement has no default case item File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at channelDecoder.v(23): inferring latch(es) for variable "myValue", which holds its previous value in one or more paths through the always construct File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+Info (10041): Inferred latch for "myValue[0]" at channelDecoder.v(23) File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+Info (10041): Inferred latch for "myValue[1]" at channelDecoder.v(23) File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+Info (10041): Inferred latch for "myValue[2]" at channelDecoder.v(23) File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+Info (10041): Inferred latch for "myValue[3]" at channelDecoder.v(23) File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+Info (10041): Inferred latch for "myValue[4]" at channelDecoder.v(23) File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+Info (10041): Inferred latch for "myValue[5]" at channelDecoder.v(23) File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+Info (10041): Inferred latch for "myValue[6]" at channelDecoder.v(23) File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+Info (10041): Inferred latch for "myValue[7]" at channelDecoder.v(23) File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+Warning (14026): LATCH primitive "playerTurnDecoder:comb_926|myValue[1]" is permanently enabled File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Warning (14026): LATCH primitive "playerTurnDecoder:comb_926|myValue[4]" is permanently enabled File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Warning (14026): LATCH primitive "playerTurnDecoder:comb_926|myValue[7]" is permanently enabled File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Warning (14026): LATCH primitive "playerTurnDecoder:comb_926|myValue[1]" is permanently enabled File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Warning (14026): LATCH primitive "playerTurnDecoder:comb_926|myValue[4]" is permanently enabled File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Warning (14026): LATCH primitive "playerTurnDecoder:comb_926|myValue[7]" is permanently enabled File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "playerTurnDecoder:comb_914|myValue[3]" merged with LATCH primitive "playerTurnDecoder:comb_914|myValue[2]" File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Info (13026): Duplicate LATCH primitive "playerTurnDecoder:comb_914|myValue[6]" merged with LATCH primitive "playerTurnDecoder:comb_914|myValue[5]" File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Info (13026): Duplicate LATCH primitive "playerTurnDecoder:comb_915|myValue[3]" merged with LATCH primitive "playerTurnDecoder:comb_915|myValue[2]" File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Info (13026): Duplicate LATCH primitive "playerTurnDecoder:comb_915|myValue[6]" merged with LATCH primitive "playerTurnDecoder:comb_915|myValue[5]" File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Info (13026): Duplicate LATCH primitive "playerTurnDecoder:comb_916|myValue[3]" merged with LATCH primitive "playerTurnDecoder:comb_916|myValue[2]" File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Info (13026): Duplicate LATCH primitive "playerTurnDecoder:comb_916|myValue[6]" merged with LATCH primitive "playerTurnDecoder:comb_916|myValue[5]" File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Info (13026): Duplicate LATCH primitive "channelDecoder:comb_925|myValue[7]" merged with LATCH primitive "channelDecoder:comb_925|myValue[1]" File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+    Info (13026): Duplicate LATCH primitive "channelDecoder:comb_925|myValue[4]" merged with LATCH primitive "channelDecoder:comb_925|myValue[1]" File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+Warning (13012): Latch playerTurnDecoder:comb_914|myValue[1] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_0_value[1] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_914|myValue[2] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_0_value[1] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_914|myValue[4] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_0_value[0] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_914|myValue[5] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_0_value[1] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_914|myValue[7] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_0_value[0] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_915|myValue[1] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_1_value[1] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_915|myValue[2] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_1_value[1] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_915|myValue[4] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_1_value[0] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_915|myValue[5] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_1_value[1] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_915|myValue[7] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_1_value[0] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_916|myValue[1] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_2_value[1] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_916|myValue[2] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_2_value[1] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_916|myValue[4] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_2_value[0] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_916|myValue[5] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_2_value[1] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch playerTurnDecoder:comb_916|myValue[7] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/playerTurnDecoder.v Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal HEX_2_value[0] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 232
+Warning (13012): Latch channelDecoder:comb_925|myValue[1] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal channelNumber[1] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 206
+Warning (13012): Latch channelDecoder:comb_925|myValue[3] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal channelNumber[0] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 206
+Warning (13012): Latch channelDecoder:comb_925|myValue[5] has unsafe behavior File: F:/York Shit/EECS 3201/lab/Final Project/channelDecoder.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal channelNumber[0] File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 206
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX_0[0]" is stuck at VCC File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 20
+    Warning (13410): Pin "HEX_1[0]" is stuck at VCC File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 21
+    Warning (13410): Pin "HEX_2[0]" is stuck at VCC File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 22
+    Warning (13410): Pin "HEX_3[0]" is stuck at VCC File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 23
+    Warning (13410): Pin "HEX_3[1]" is stuck at VCC File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 23
+    Warning (13410): Pin "HEX_4[0]" is stuck at VCC File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 24
+    Warning (13410): Pin "HEX_4[2]" is stuck at VCC File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 24
+    Warning (13410): Pin "HEX_4[6]" is stuck at GND File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 24
+    Warning (13410): Pin "HEX_5[0]" is stuck at VCC File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 25
+    Warning (13410): Pin "HEX_5[2]" is stuck at GND File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 25
+    Warning (13410): Pin "HEX_5[3]" is stuck at GND File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 25
+    Warning (13410): Pin "HEX_5[5]" is stuck at GND File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 25
+    Warning (13410): Pin "HEX_5[6]" is stuck at GND File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 25
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 10 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file F:/York Shit/EECS 3201/lab/Final Project/output_files/Final_Project.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: F:/York Shit/EECS 3201/lab/Final Project/Final_Project.v Line: 28
+Info (21057): Implemented 196 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 48 output pins
+    Info (21061): Implemented 141 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Tue Dec 07 18:15:08 2021
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:12
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in F:/York Shit/EECS 3201/lab/Final Project/output_files/Final_Project.map.smsg.
+
+

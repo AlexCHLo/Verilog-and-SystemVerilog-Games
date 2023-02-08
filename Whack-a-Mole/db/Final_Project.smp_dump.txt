@@ -1,0 +1,7 @@
+
+State Machine - |Final_Project|STATE
+Name STATE.start STATE.finish STATE.mole STATE.math 
+STATE.start 0 0 0 0 
+STATE.math 1 0 0 1 
+STATE.mole 1 0 1 0 
+STATE.finish 1 1 0 0 

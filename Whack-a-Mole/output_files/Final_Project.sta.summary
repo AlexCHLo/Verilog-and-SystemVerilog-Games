@@ -1,0 +1,257 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'HEX1_input[5]'
+Slack : -5.105
+TNS   : -66.645
+
+Type  : Slow 1200mV 85C Model Setup 'HEX1_input[4]'
+Slack : -5.037
+TNS   : -57.239
+
+Type  : Slow 1200mV 85C Model Setup 'HEX1_input[0]'
+Slack : -4.697
+TNS   : -29.786
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -4.233
+TNS   : -418.482
+
+Type  : Slow 1200mV 85C Model Setup 'HEX0_input[0]'
+Slack : -4.025
+TNS   : -25.772
+
+Type  : Slow 1200mV 85C Model Setup 'HEX5_input[0]'
+Slack : -4.009
+TNS   : -24.093
+
+Type  : Slow 1200mV 85C Model Setup 'HEX3_input[0]'
+Slack : -3.746
+TNS   : -23.827
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.315
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'HEX0_input[0]'
+Slack : 0.801
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'HEX3_input[0]'
+Slack : 0.952
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'HEX1_input[5]'
+Slack : 0.990
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'HEX5_input[0]'
+Slack : 0.995
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'HEX1_input[4]'
+Slack : 1.092
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'HEX1_input[0]'
+Slack : 1.180
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -185.852
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HEX1_input[5]'
+Slack : 0.273
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HEX1_input[4]'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HEX1_input[0]'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HEX0_input[0]'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HEX3_input[0]'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HEX5_input[0]'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'HEX1_input[5]'
+Slack : -4.755
+TNS   : -60.630
+
+Type  : Slow 1200mV 0C Model Setup 'HEX1_input[4]'
+Slack : -4.695
+TNS   : -53.164
+
+Type  : Slow 1200mV 0C Model Setup 'HEX1_input[0]'
+Slack : -4.322
+TNS   : -27.403
+
+Type  : Slow 1200mV 0C Model Setup 'HEX0_input[0]'
+Slack : -3.768
+TNS   : -24.121
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.765
+TNS   : -365.088
+
+Type  : Slow 1200mV 0C Model Setup 'HEX5_input[0]'
+Slack : -3.624
+TNS   : -22.063
+
+Type  : Slow 1200mV 0C Model Setup 'HEX3_input[0]'
+Slack : -3.382
+TNS   : -21.801
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'HEX0_input[0]'
+Slack : 0.749
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'HEX1_input[5]'
+Slack : 0.899
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'HEX5_input[0]'
+Slack : 0.906
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'HEX3_input[0]'
+Slack : 0.945
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'HEX1_input[4]'
+Slack : 1.027
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'HEX1_input[0]'
+Slack : 1.119
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -185.078
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HEX1_input[0]'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HEX1_input[5]'
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HEX1_input[4]'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HEX0_input[0]'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HEX5_input[0]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HEX3_input[0]'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'HEX1_input[5]'
+Slack : -2.182
+TNS   : -28.750
+
+Type  : Fast 1200mV 0C Model Setup 'HEX1_input[4]'
+Slack : -2.158
+TNS   : -23.061
+
+Type  : Fast 1200mV 0C Model Setup 'HEX1_input[0]'
+Slack : -1.820
+TNS   : -10.381
+
+Type  : Fast 1200mV 0C Model Setup 'HEX5_input[0]'
+Slack : -1.692
+TNS   : -8.438
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.464
+TNS   : -128.550
+
+Type  : Fast 1200mV 0C Model Setup 'HEX3_input[0]'
+Slack : -1.356
+TNS   : -8.343
+
+Type  : Fast 1200mV 0C Model Setup 'HEX0_input[0]'
+Slack : -1.327
+TNS   : -8.021
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'HEX3_input[0]'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'HEX0_input[0]'
+Slack : 0.242
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'HEX5_input[0]'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'HEX1_input[0]'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'HEX1_input[4]'
+Slack : 0.389
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'HEX1_input[5]'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -163.364
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HEX1_input[4]'
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HEX1_input[5]'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HEX0_input[0]'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HEX3_input[0]'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HEX5_input[0]'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HEX1_input[0]'
+Slack : 0.418
+TNS   : 0.000
+
+------------------------------------------------------------

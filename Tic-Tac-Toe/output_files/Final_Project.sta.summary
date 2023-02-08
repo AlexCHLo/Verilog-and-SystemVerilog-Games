@@ -1,0 +1,185 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'button_1'
+Slack : -2.943
+TNS   : -19.419
+
+Type  : Slow 1200mV 85C Model Setup 'HEX_0_value[0]'
+Slack : -2.519
+TNS   : -11.718
+
+Type  : Slow 1200mV 85C Model Setup 'channelNumber[0]'
+Slack : -2.124
+TNS   : -6.112
+
+Type  : Slow 1200mV 85C Model Setup 'HEX_0_value[2]'
+Slack : -2.068
+TNS   : -25.997
+
+Type  : Slow 1200mV 85C Model Setup 'button_2'
+Slack : -2.047
+TNS   : -33.374
+
+Type  : Slow 1200mV 85C Model Hold 'button_2'
+Slack : 0.104
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'button_1'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'HEX_0_value[2]'
+Slack : 0.640
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'channelNumber[0]'
+Slack : 1.134
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'HEX_0_value[0]'
+Slack : 1.268
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'button_2'
+Slack : -3.000
+TNS   : -26.218
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'button_1'
+Slack : -3.000
+TNS   : -15.220
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HEX_0_value[2]'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HEX_0_value[0]'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'channelNumber[0]'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'button_1'
+Slack : -2.611
+TNS   : -17.066
+
+Type  : Slow 1200mV 0C Model Setup 'HEX_0_value[0]'
+Slack : -2.273
+TNS   : -10.734
+
+Type  : Slow 1200mV 0C Model Setup 'channelNumber[0]'
+Slack : -1.881
+TNS   : -5.394
+
+Type  : Slow 1200mV 0C Model Setup 'button_2'
+Slack : -1.814
+TNS   : -28.926
+
+Type  : Slow 1200mV 0C Model Setup 'HEX_0_value[2]'
+Slack : -1.811
+TNS   : -22.224
+
+Type  : Slow 1200mV 0C Model Hold 'button_2'
+Slack : 0.083
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'button_1'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'HEX_0_value[2]'
+Slack : 0.562
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'channelNumber[0]'
+Slack : 1.096
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'HEX_0_value[0]'
+Slack : 1.135
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'button_2'
+Slack : -3.000
+TNS   : -26.218
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'button_1'
+Slack : -3.000
+TNS   : -15.220
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HEX_0_value[0]'
+Slack : 0.415
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HEX_0_value[2]'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'channelNumber[0]'
+Slack : 0.457
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'HEX_0_value[0]'
+Slack : -0.962
+TNS   : -4.090
+
+Type  : Fast 1200mV 0C Model Setup 'channelNumber[0]'
+Slack : -0.929
+TNS   : -2.736
+
+Type  : Fast 1200mV 0C Model Setup 'button_1'
+Slack : -0.895
+TNS   : -5.194
+
+Type  : Fast 1200mV 0C Model Setup 'HEX_0_value[2]'
+Slack : -0.888
+TNS   : -9.376
+
+Type  : Fast 1200mV 0C Model Setup 'button_2'
+Slack : -0.829
+TNS   : -12.621
+
+Type  : Fast 1200mV 0C Model Hold 'button_2'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'button_1'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'HEX_0_value[2]'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'channelNumber[0]'
+Slack : 0.502
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'HEX_0_value[0]'
+Slack : 0.579
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'button_2'
+Slack : -3.000
+TNS   : -23.413
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'button_1'
+Slack : -3.000
+TNS   : -13.744
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HEX_0_value[2]'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HEX_0_value[0]'
+Slack : 0.449
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'channelNumber[0]'
+Slack : 0.454
+TNS   : 0.000
+
+------------------------------------------------------------

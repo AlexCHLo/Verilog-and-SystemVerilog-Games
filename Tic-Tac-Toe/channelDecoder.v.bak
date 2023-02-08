@@ -1,0 +1,24 @@
+//////////////////////////////////////////////
+// channel #1
+// if locationSymbol = 4'b0000, then hexBit = Reverse L
+// if locationSymbol = 4'b0001, then hexBit = L
+// if locationSymbol = 4'b0010, then hexBit = L
+
+// channel #2
+// if locationSymbol = 4'b0011, then hexBit = ]
+// if locationSymbol = 4'b0100, then hexBit = ]
+// if locationSymbol = 4'b0101, then hexBit = [
+
+// channel #3
+// if locationSymbol = 4'b0110, then hexBit = 7
+// if locationSymbol = 4'b0111, then hexBit = Reverse 7
+// if locationSymbol = 4'b1000, then hexBit = Reverse 7
+
+module channelDecoder (locationSymbol, hexBit);
+
+input locationSymbol;
+output hexBit;
+
+
+
+endmodule
