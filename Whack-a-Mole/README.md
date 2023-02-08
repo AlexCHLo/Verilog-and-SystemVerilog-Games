@@ -1,5 +1,5 @@
 ### Whack-a-Mole Project
-#By Alex Lo & Andres Tinoco
+# By Alex Lo & Andres Tinoco
 
 
 
