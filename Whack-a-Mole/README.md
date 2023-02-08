@@ -1,3 +1,8 @@
+### Whack-a-Mole Project
+#By Alex Lo & Andres Tinoco
+
+
+
 ## Project Report
 
 For this EECS 3216 Z project, we will be replicating a toy called “Bop It” as shown below. It's a toy that entails a series of mini games where you do the mini games within a time limit. Those mini games involve physically interacting with the toy in a certain way, such as twisting a knob, smacking a button or shaking the toy.
