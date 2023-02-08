@@ -1,5 +1,5 @@
 # Final Course Project
-### Project Member: Alex Lo - 215681364 (I did all the coding)
+### Project Member: Alex Lo
 
 ## Description of my design 
 I will be simulating a tic tac toe game onto the DES10-Lite board, using the 6 seven segments LED to display the games, and using the 2 switches and 2 buttons to control the games. The 2 players in Tic Tac Toe must make a three in a row with their corresponding symbols using the switches and the buttons to control the game. Button 1 and button two will be used by the player to control the input. They can control where they want to place with the first button, and then place it with the second button.
@@ -19,4 +19,5 @@ ts/msgs/msgs/evrfx_veri_mix_block_non_block.htm
 - https://www.intel.com/content/www/us/en/programmable/quartushelp/13.0/mergedProjec
 ts/msgs/msgs/evrfx_veri_if_condition_does_not_match_sensitivity_list_edge.htm
 I did also made use of the DE10-Lite User Manual to help me configure my pinning assignment.
+
 Link to my video: https://youtu.be/xtjNo0AHt1U
