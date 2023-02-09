@@ -10,14 +10,12 @@ While implementing my code, I made a poor decision to have the display work arou
 
 Source:
 I did not use any external code for my implementation. Although, I did search up on the internet for errors that I have encountered and it helped me diagnose what was the specific cause.
-- intel.com/content/www/us/en/programmable/quartushelp/13.0/mergedProjects/msgs/msg
-s/evrfx_vdb_net_multiple_drivers.htm
-- https://www.intel.com/content/www/us/en/programmable/quartushelp/13.0/mergedProjec
-ts/msgs/msgs/evrfx_veri_id_not_a_function.htm
-- https://www.intel.com/content/www/us/en/programmable/quartushelp/13.0/mergedProjec
-ts/msgs/msgs/evrfx_veri_mix_block_non_block.htm
-- https://www.intel.com/content/www/us/en/programmable/quartushelp/13.0/mergedProjec
-ts/msgs/msgs/evrfx_veri_if_condition_does_not_match_sensitivity_list_edge.htm
+
+- intel.com/content/www/us/en/programmable/quartushelp/13.0/mergedProjects/msgs/msgs/evrfx_vdb_net_multiple_drivers.htm
+- https://www.intel.com/content/www/us/en/programmable/quartushelp/13.0/mergedProjects/msgs/msgs/evrfx_veri_id_not_a_function.htm
+- https://www.intel.com/content/www/us/en/programmable/quartushelp/13.0/mergedProjects/msgs/msgs/evrfx_veri_mix_block_non_block.htm
+- https://www.intel.com/content/www/us/en/programmable/quartushelp/13.0/mergedProjects/msgs/msgs/evrfx_veri_if_condition_does_not_match_sensitivity_list_edge.html
+
 I did also made use of the DE10-Lite User Manual to help me configure my pinning assignment.
 
 Link to my video: https://youtu.be/xtjNo0AHt1U
